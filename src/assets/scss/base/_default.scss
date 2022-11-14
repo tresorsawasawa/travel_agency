@@ -22,6 +22,7 @@ section { padding: 4rem 0 2rem;  }
 
 .icon {
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .clickable { cursor: pointer; }
@@ -41,6 +42,11 @@ section { padding: 4rem 0 2rem;  }
 
 input {
   font-size: 100%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
 }
 
 /* Default styling to be applied to the whole application end */

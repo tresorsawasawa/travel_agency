@@ -1,8 +1,15 @@
 import React from 'react';
+import Footer from './Components/Footer/Footer';
+import Home from './Components/Home/Home';
+import Main from './Components/Main/Main';
+import Navbar from './Components/Navbar/Navbar';
 
 const App = () => (
-  <main className="App">
-    <h2>Travel Agency App</h2>
-  </main>
+  <>
+    <Navbar />
+    <Home />
+    <Main />
+    <Footer />
+  </>
 );
 export default App;
