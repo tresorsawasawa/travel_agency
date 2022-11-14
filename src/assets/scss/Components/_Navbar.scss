@@ -5,7 +5,7 @@
   @include flex_between_center(row);
   position: fixed;
   width: 100%;
-  z-index: 99;
+  z-index: 9999;
   padding: 1rem;
   background-color: $whiteColor;
   box-shadow: $menuShadow;
@@ -50,11 +50,11 @@
       width: 80%;
       border-radius: 1rem;
       left: 50%;
-      top: 6rem;
+      top: -500px;
       z-index: 999;
       box-shadow: $menuShadow;
       transform: translate(-50%);
-      transition: 0.3s ease-in-out;
+      transition: -9s ease-in-out;
       
       .navList {
         @include flex_center_center(column);
@@ -95,6 +95,11 @@
           transition: 0.3s all ease-in-out;
         }
       }
+    }
+
+    .activeNavbar {
+      top: 7rem;
+      transition: -9s all ease-in-out;
     }
   }
 }
