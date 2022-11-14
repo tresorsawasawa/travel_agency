@@ -1,0 +1,36 @@
+@mixin container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@mixin flex_center_center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex_row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin grid_center {
+  display: grid;
+  align-items: center;
+}
+
+@mixin btn_and_anchor {
+  color: $whiteColor;
+  font-weight: 500;
+}
+
+@mixin img_video {
+  width: 100%;
+  height: auto;
+}
