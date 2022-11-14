@@ -17,6 +17,13 @@
   flex-direction: $direction;
 }
 
+@mixin flex_center_stretch($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: $direction;
+}
+
 @mixin flex_column {
   display: flex;
   flex-direction: column;

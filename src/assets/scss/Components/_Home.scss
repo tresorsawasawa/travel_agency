@@ -1,0 +1,58 @@
+@import '../base/mixins';
+@import '../base/colors';
+
+.home {
+  @include flex_center_center(row);
+  position: relative;
+  width: 100%;
+  margin: auto;
+
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: $homeOverlayGb;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    mix-blend-mode: hard-light;
+  }
+  
+  .HomeVideoBg {
+    @include img_video;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+  }
+
+  .homeContent {
+    @include container;
+    @include flex_center_stretch(column);
+
+    width: 100%;
+    height: max-content;
+    row-gap: 3rem;
+    padding: 8rem 1.5rem 3rem;
+    margin: auto;
+    color: $whiteColor;
+    z-index: 99;
+
+    .textContainer {
+      padding: 2rem 0;
+
+      .smallText {
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      .homeTitle {
+        position: relative;
+        font-style: 1.8rem;
+      }
+    }
+  }
+}
