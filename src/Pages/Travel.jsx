@@ -4,7 +4,7 @@ const Travel = () => (
   <main>
     <section>
       <h2 style={{ marginTop: '5rem', textAlign: 'center' }}>
-        The Travel page Under Construction
+        The Travel page is Under Construction
       </h2>
     </section>
   </main>
