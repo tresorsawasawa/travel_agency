@@ -2,27 +2,40 @@ import React, { useState } from 'react';
 import { MdOutlineTravelExplore } from 'react-icons/md';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { TbGridDots } from 'react-icons/tb';
+import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const navLists = [
     {
-      id: 1, to: 'home', name: 'Home', class: 'navItem  clickable',
+      id: 1,
+      to: 'home',
+      name: 'about',
+      class: 'navItem  clickable',
     },
     {
-      id: 4, to: 'home', name: 'about', class: 'navItem  clickable',
+      id: 2,
+      to: 'home',
+      name: 'News',
+      class: 'navItem  clickable',
     },
     {
-      id: 2, to: 'home', name: 'News', class: 'navItem  clickable',
+      id: 3,
+      to: 'home',
+      name: 'Packages',
+      class: 'navItem  clickable',
     },
     {
-      id: 3, to: 'home', name: 'Packages', class: 'navItem  clickable',
+      id: 4,
+      to: 'home',
+      name: 'Pages',
+      class: 'navItem  clickable',
     },
     {
-      id: 5, to: 'home', name: 'Pages', class: 'navItem  clickable',
-    },
-    {
-      id: 6, to: 'home', name: 'Shop', class: 'navItem  clickable',
+      id: 5,
+      to: 'home',
+      name: 'Contacts',
+      class: 'navItem  clickable',
     },
   ];
 
@@ -35,23 +48,35 @@ const Navbar = () => {
   return (
     <header className="header flex">
       <div className="logoContainer flex clickable">
-        <Link to="home" className="clickable">
+        <NavLink to="/" className="clickable">
           <h1 className="logo flex">
             <MdOutlineTravelExplore className="icon" />
             Voyage.
           </h1>
-        </Link>
+        </NavLink>
       </div>
 
       <nav className={active}>
         <ul className="navList flex">
-          {navLists.map((navItem) => (
-            <li
-              key={navItem.id}
-              aria-hidden="true"
-              className={navItem.class}
+          <li aria-hidden="true" className="navItem  clickable">
+            <NavLink
+              to="/about"
+              onClick={() => closeNavMenu()}
+              className="navLink"
             >
-              <Link to={navItem.to} onClick={() => closeNavMenu()} smooth span={true.toString()} className="navLink">
+              About
+            </NavLink>
+          </li>
+
+          {navLists.map((navItem) => (
+            <li key={navItem.id} aria-hidden="true" className={navItem.class}>
+              <Link
+                to={navItem.to}
+                onClick={() => closeNavMenu()}
+                smooth
+                span={true.toString()}
+                className="navLink"
+              >
                 {navItem.name}
               </Link>
             </li>

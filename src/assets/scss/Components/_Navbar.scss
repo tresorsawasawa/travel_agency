@@ -11,14 +11,18 @@
   box-shadow: $menuShadow;
 
   .logoContainer {
-    color: $blackColor;
     justify-content: center;
 
-    .icon {
-      color: $primaryColor;
-      font-size: 25px;
-      transform: translateY(5px)
+    a {
+      color: $blackColor;
+
+      .icon {
+        color: $primaryColor;
+        font-size: 25px;
+        transform: translateY(5px)
+      }
     }
+
   }
 
   .navbarContainer {
