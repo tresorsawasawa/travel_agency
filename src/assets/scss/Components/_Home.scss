@@ -1,0 +1,170 @@
+/* stylelint-disable no-descending-specificity */
+@import '../base/mixins';
+@import '../base/colors';
+
+.home {
+  @include flex_center_center(row);
+
+  position: relative;
+  width: 100%;
+  margin: auto;
+
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: $homeOverlayGb;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    mix-blend-mode: hard-light;
+  }
+
+  .HomeVideoBg {
+    @include img_video;
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+  }
+
+  .homeContent {
+    @include container;
+    @include flex_center_stretch(column);
+
+    width: 100%;
+    height: max-content;
+    row-gap: 3rem;
+    padding: 5rem 1.5rem 3rem;
+    margin: auto;
+    color: $whiteColor;
+    z-index: 99;
+
+    .textContainer {
+      padding: 2rem 0;
+
+      .smallText {
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      .homeTitle {
+        position: relative;
+        font-size: 1.8rem;
+      }
+    }
+
+    .inputsContainer {
+      position: relative;
+      padding: 2rem 1rem 0.7rem;
+      border-radius: 1rem;
+      gap: 1rem;
+      background-color: $whiteColor;
+
+      .searchOptions {
+        @include flex_center_center(row);
+
+        background: $gradientColor;
+        bottom: -0.7rem;
+        padding: 1rem;
+        border-radius: 3rem;
+        gap: 0.7rem;
+        width: min-content;
+        margin: 0.5rem auto;
+
+        &:hover {
+          background: $primaryColor;
+        }
+
+        .icon {
+          font-size: 20px;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+
+      .dataInput {
+        label {
+          display: block;
+          color: $textColor;
+          padding-bottom: 10px;
+          font-weight: 500;
+          font-size: 13px;
+
+          .inputCont {
+            height: 40px;
+            padding: 0 0.8rem;
+            background: $inputColor;
+            border-radius: 2rem;
+
+            input {
+              width: 100%;
+              border: none;
+              outline: none;
+              font-size: 15px;
+              font-weight: 400;
+              background: none;
+
+              &::placeholder {
+                font-size: 14px;
+              }
+            }
+
+            .icon {
+              color: $primaryColor;
+              font-size: 20px;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .homeFooterIcons {
+    width: 100%;
+    justify-content: space-between;
+
+    .leftsIcons {
+      .iconItem {
+        a {
+          color: $whiteColor;
+          margin: 0 5px;
+
+          .icon {
+            font-weight: 600;
+            font-size: 20px;
+
+            &:hover {
+              color: $primaryColor;
+              transform: scale(1.3);
+              transition: 0.3s all ease-in-out;
+            }
+          }
+        }
+      }
+    }
+
+    .rightIcons {
+      .iconItem {
+        .icon {
+          color: $whiteColor;
+          margin: 0 5px;
+          font-weight: 600;
+          font-size: 20px;
+
+          &:hover {
+            color: $primaryColor;
+            transform: scale(1.3);
+            transition: 0.3s all ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

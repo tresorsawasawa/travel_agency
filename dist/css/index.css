@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* Default styling to be applied to the whole application start */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f0f0f6;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 4rem 0 2rem;
+}
+
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.btn {
+  padding: 0.6rem;
+  background: -webkit-gradient(linear, left top, right top, from(#10b5cb), to(#0073a8));
+  background: linear-gradient(to right, #10b5cb, #0073a8);
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #10b5cb;
+}
+
+input {
+  font-size: 100%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Default styling to be applied to the whole application end */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  padding: 1rem;
+  background-color: #fff;
+}
+.header .logoContainer {
+  color: #1b2d36;
+}
+.header .navbarContainer .navList .bookBtnContainer .bookBtn {
+  color: #fff;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .header .navbarContainer {
+    position: absolute;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    background-color: #fff;
+    width: 80%;
+    border-radius: 1rem;
+    left: 50%;
+    top: 6rem;
+    z-index: 999;
+    -webkit-box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+            box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .header .navbarContainer .navList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .navbarContainer .navList .navItem {
+    padding: 0.5rem 0;
+  }
+  .header .navbarContainer .navList .navItem .navLink {
+    color: #58585f;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .header .navbarContainer .navList .navItem .navLink:hover {
+    color: #0073a8;
+  }
+  .header .navbarContainer .navList .bookBtnContainer {
+    margin-top: 1rem;
+  }
+}/*# sourceMappingURL=index.css.map */
