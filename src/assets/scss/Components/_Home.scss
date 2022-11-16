@@ -1,8 +1,10 @@
+/* stylelint-disable no-descending-specificity */
 @import '../base/mixins';
 @import '../base/colors';
 
 .home {
   @include flex_center_center(row);
+
   position: relative;
   width: 100%;
   margin: auto;
@@ -20,10 +22,10 @@
 
   .HomeVideoBg {
     @include img_video;
+
     position: absolute;
     height: 100%;
     width: 100%;
-
     top: 0;
     bottom: 0;
     object-fit: cover;
@@ -51,7 +53,7 @@
 
       .homeTitle {
         position: relative;
-        font-style: 1.8rem;
+        font-size: 1.8rem;
       }
     }
 
@@ -61,6 +63,30 @@
       border-radius: 1rem;
       gap: 1rem;
       background-color: $whiteColor;
+
+      .searchOptions {
+        @include flex_center_center(row);
+
+        background: $gradientColor;
+        bottom: -0.7rem;
+        padding: 1rem;
+        border-radius: 3rem;
+        gap: 0.7rem;
+        width: min-content;
+        margin: 0.5rem auto;
+
+        &:hover {
+          background: $primaryColor;
+        }
+
+        .icon {
+          font-size: 20px;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
 
       .dataInput {
         label {
@@ -95,29 +121,6 @@
               margin-left: 10px;
             }
           }
-        }
-      }
-
-      .searchOptions {
-        @include flex_center_center(row);
-        background: $gradientColor;
-        bottom: -0.7rem;
-        padding: 1rem;
-        border-radius: 3rem;
-        gap: 0.7rem;
-        width: min-content;
-        margin: 0.5rem auto;
-
-        &:hover {
-          background: $primaryColor;
-        }
-
-        .icon {
-          font-size: 20px;
-        }
-
-        span {
-          font-size: 145x;
         }
       }
     }

@@ -1,8 +1,10 @@
+/* stylelint-disable no-descending-specificity */
 @import '../base/mixins';
 @import '../base/colors';
 
 .header {
   @include flex_between_center(row);
+
   position: fixed;
   width: 100%;
   z-index: 9999;
@@ -19,18 +21,7 @@
       .icon {
         color: $primaryColor;
         font-size: 25px;
-        transform: translateY(5px)
-      }
-    }
-
-  }
-
-  .navbarContainer {
-    .navList{
-      .bookBtnContainer {
-        .bookBtn {
-          @include btn_and_navItem;
-        }
+        transform: translateY(5px);
       }
     }
   }
@@ -42,6 +33,16 @@
 
       &:hover {
         color: $secondColor;
+      }
+    }
+  }
+
+  .navbarContainer {
+    .navList {
+      .bookBtnContainer {
+        .bookBtn {
+          @include btn_and_navItem;
+        }
       }
     }
   }
@@ -59,9 +60,10 @@
       box-shadow: $menuShadow;
       transform: translate(-50%);
       transition: -9s ease-in-out;
-      
+
       .navList {
         @include flex_center_center(column);
+
         padding-top: 3rem;
 
         .navItem {
@@ -83,7 +85,7 @@
 
         .bookBtnContainer {
           margin-top: 1rem;
-           padding-bottom: 0.4rem;
+          padding-bottom: 0.4rem;
         }
       }
 
@@ -92,7 +94,7 @@
         top: 1rem;
         right: 1rem;
         color: $primaryColor;
-        
+
         &:hover {
           color: $secondColor;
           transform: scale(1.15);
