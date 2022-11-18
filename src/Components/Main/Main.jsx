@@ -5,7 +5,7 @@ import mostVisitedData from './data';
 const Main = () => (
   <section className="container main">
     <div className="sectTitle">
-      <h2>Déstinations les plus plus visiteés</h2>
+      <h2 className="title">Les plus visitées</h2>
     </div>
 
     <ul className="secContent">
@@ -21,12 +21,12 @@ const Main = () => (
           description,
         }) => (
           <li className="singleDestination" key={id}>
-            <div className="card">
-              <img src={image} alt={destTitle} />
+            <div className="imageCont">
+              <img className="cardImage" src={image} alt={destTitle} />
             </div>
 
             <div className="cardInfo">
-              <h3>{destTitle}</h3>
+              <h3 className="destTitle">{destTitle}</h3>
               <div className="location flex">
                 {icon}
                 <span className="name">{location}</span>
@@ -36,6 +36,7 @@ const Main = () => (
                 <div className="grade">
                   <span>
                     {grade}
+                    {' '}
                     <small>+1</small>
                   </span>
                 </div>
@@ -53,7 +54,7 @@ const Main = () => (
               </button>
             </div>
           </li>
-        )
+        ),
       )}
     </ul>
   </section>
