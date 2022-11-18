@@ -40,10 +40,10 @@ const Home = () => (
           </div>
         ))}
 
-        <div className="searchOptions clickable">
+        <button type="submit" className="searchOptions btn clickable">
           <span>Rechercher</span>
           <GoSearch className="icon" />
-        </div>
+        </button>
       </form>
 
       <div className="homeFooterIcons flex">
