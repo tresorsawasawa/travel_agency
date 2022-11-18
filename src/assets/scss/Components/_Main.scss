@@ -1,1 +1,148 @@
-@import '../base/colors'
+@import '../base/colors';
+@import '../base/mixins';
+
+.main {
+  @include container;
+
+  width: 100%;
+
+  .sectTitle {
+    .title {
+      position: relative;
+      width: max-content;
+      color: $textColor;
+      margin: 1rem 0;
+      z-index: 2;
+
+      &::after {
+        position: absolute;
+        content: '';
+        background: $secondColor;
+        height: 6px;
+        right: 0;
+        width: 120px;
+        bottom: 5px;
+        z-index: -1;
+      }
+    }
+  }
+
+  .secContent {
+    @include grid_center;
+
+    justify-content: center;
+    gap: 1.5rem;
+
+    .singleDestination {
+      height: 100%;
+      display: grid;
+      row-gap: 10px;
+      align-items: center;
+      background: $cardBgColor;
+      box-shadow: $mainCardsShadow;
+      border-radius: 10px;
+      overflow: hidden;
+
+      &:hover {
+        background: $cardHoverColor;
+        box-shadow: 1px 4px 4px rgba(85, 85, 114, 0.549);
+        transition: 0.3s ease;
+      }
+
+      .imageCont {
+        height: 180px;
+        width: 100%;
+        overflow: hidden;
+
+        .cardImage {
+          @include img_video;
+
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: 2s ease;
+        }
+
+        &:hover {
+          .cardImage {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .cardInfo {
+        padding: 1rem;
+
+        .destTitle {
+          color: $blackColor;
+          font-size: 1.25rem;
+        }
+
+        .location {
+          gap: 0.5rem;
+
+          .icon {
+            color: $textColor;
+            font-size: 18px;
+          }
+
+          .name {
+            color: $textColor;
+            font-weight: 400;
+            font-size: 14px;
+          }
+        }
+
+        .fees {
+          width: 100%;
+          justify-content: space-between;
+          padding: 1rem;
+          margin: 1rem 0;
+          border-top: 1.5px solid $greyTextColor;
+          border-bottom: 1.5px solid $greyTextColor;
+
+          .grade {
+            @include flex_center_center(row);
+
+            max-width: 100px;
+            line-height: 20px;
+
+            small {
+              text-align: center;
+              background: $gradientColor;
+              color: $whiteColor;
+              padding: 1px 10px;
+              font-size: 10px;
+              border-radius: 10px;
+            }
+          }
+
+          .price {
+            font-size: 2rem;
+            color: $blackColor;
+          }
+        }
+
+        .desc {
+          font-size: 13.5px;
+          color: $textColor;
+          font-weight: 500;
+          text-align: justify;
+        }
+
+        .btn {
+          margin: 1rem auto 0;
+          color: $whiteColor;
+          font-weight: 600;
+          gap: 0.5rem;
+          justify-content: space-between;
+
+          .icon {
+            font-size: 18px;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

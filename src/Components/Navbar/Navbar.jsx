@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MdOutlineTravelExplore } from 'react-icons/md';
+import uuid from 'react-uuid';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { TbGridDots } from 'react-icons/tb';
 import { NavLink } from 'react-router-dom';
@@ -8,32 +9,32 @@ import { Link } from 'react-scroll';
 const Navbar = () => {
   const navLists = [
     {
-      id: 1,
-      to: 'home',
-      name: 'about',
+      id: uuid(),
+      to: '/',
+      name: 'Home',
       class: 'navItem  clickable',
     },
     {
-      id: 2,
-      to: 'home',
-      name: 'News',
+      id: uuid(),
+      to: '/about',
+      name: 'About',
       class: 'navItem  clickable',
     },
     {
-      id: 3,
-      to: 'home',
-      name: 'Packages',
+      id: uuid(),
+      to: 'travels/:id',
+      name: 'Item',
       class: 'navItem  clickable',
     },
     {
-      id: 4,
-      to: 'home',
-      name: 'Pages',
+      id: uuid(),
+      to: '/travels',
+      name: 'Our Destinations',
       class: 'navItem  clickable',
     },
     {
-      id: 5,
-      to: 'home',
+      id: uuid(),
+      to: '/contacts',
       name: 'Contacts',
       class: 'navItem  clickable',
     },
@@ -58,27 +59,15 @@ const Navbar = () => {
 
       <nav className={active}>
         <ul className="navList flex">
-          <li aria-hidden="true" className="navItem  clickable">
-            <NavLink
-              to="/about"
-              onClick={() => closeNavMenu()}
-              className="navLink"
-            >
-              About
-            </NavLink>
-          </li>
-
           {navLists.map((navItem) => (
             <li key={navItem.id} aria-hidden="true" className={navItem.class}>
-              <Link
+              <NavLink
                 to={navItem.to}
                 onClick={() => closeNavMenu()}
-                smooth
-                span={true.toString()}
                 className="navLink"
               >
                 {navItem.name}
-              </Link>
+              </NavLink>
             </li>
           ))}
 
